@@ -1,0 +1,40 @@
+h1{color: darkgreen;
+   font-family: Georgia;
+   text-align: center;
+}
+
+h2{
+    font-family: Georgia;
+    text-align: center;
+}
+
+p{
+    line-height: 25px; 
+}
+
+a:link{
+    text-decoration: none;
+    
+    
+}
+
+a:hover{
+    text-decoration-line: underline;
+}
+
+
+
+h4{
+    text-transform: uppercase;
+}
+
+img{
+    float:left;
+    margin-right:30px;
+}
+
+ul{
+    list-style-position: inside;
+}
+
+
