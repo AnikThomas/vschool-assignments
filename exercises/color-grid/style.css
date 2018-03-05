@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 0;
+}
+
+body{
+  height: 100vh;
+  position: relative;
+}
+
+.wrapper{
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.row{
+  height: 50px;
+}
+
+.col{
+  height: 100%;
+  display: inline-block;
+  border: 3px solid white;
+}
+
+.pink{
+  background-color: #f5c6d6;
+  width: 100%;
+}
+
+.colorhot{
+  background-color: #EE2E84;
+  width: 25%;
+}
+
+.lightblue{
+  background-color: #85CFD8;
+  width: 50%; 
+}
+
+.green{
+  background-color: #8DC63F;
+  width: 75%;
+}
+
+.orange{
+  background-color: #E76E34;
+  width: 25%;
+}
+
+
+
+
