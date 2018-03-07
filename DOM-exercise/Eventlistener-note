@@ -1,0 +1,25 @@
+// eventlistener
+
+var button1 = document.getElementById("button1");
+
+button1.addEventListener('mouseenter', colorChange);
+button1.addEventListener('mouseleave', colorChange);
+var body = document.getElementsByTagName('body')[0];
+
+body.addEventListener('scroll',function(){
+    backgroundColor
+})
+
+function colorChange(e) {
+    //keep track of number of clicks
+    //if button is clicked even number of times, bgc=red
+    //if button is clicked odd number of times, bgc=white
+    console.log(e);
+    if (button1.style.backgroundColor === 'red'){
+        button1.style.backgroundColor = 'white'
+    } else {
+        button1.style.backgroundColor = 'red'
+    }
+};
+
+document.getElementById('button)

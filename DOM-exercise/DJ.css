@@ -1,0 +1,19 @@
+ body{
+     position: relative;
+     height:100vh;
+ }
+ 
+ 
+ 
+ #box{
+     position:absolute;
+     width: 40%;
+     height:40vh;
+     border: thin solid red;
+     border-radius: 50px;
+     left:50%;
+     top:50%;
+     transform: translateY(-50%) translateX(-50%)
+
+
+ }

@@ -1,0 +1,13 @@
+// DOM example
+var header = document.getElementById("header");
+var header = document.createElement("header");
+var header = document.getElementByTagName("body")[0];
+
+header.innerHTML = "im the header";
+header.id = "changeId";
+header.className = "test";
+header.style = "color: red; font-Family: Georgia;";
+header.innerHTML = "test";
+
+body.appendChild(header);
+

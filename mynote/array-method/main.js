@@ -25,7 +25,16 @@ var stuff = ['cream','donuts','Coffe','cream','bananas','carrots']
 
 function checkFor(string,arr){
     var count=0
+    for (var i = arr.indexOf(string); i < arr.lastIndexOf(string) + 1; i++) {
+        if (arr[i] === string){
+            count++
+        }
+    }
+    return count;
 }
+console.log(checkFor('cream','stuff'))
+
+
 
 //study join method
 
