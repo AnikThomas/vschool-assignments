@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Travel Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="travel.css" />
+</head>
+<body>
+   
+    <h1>Aniek Airlines</h1>
+    <h2>Passenger Form</h2>
+    <form id="submit" name="login">
+        <input id="firstName" name="firstName" type="text" placeholder="Enter First Name">
+        <input id="lastName" name="lastName" type="text" placeholder="Enter Last Name">
+
+        <h3>Age</h3>
+        <input id="number" name="number" type="Age" placeholder="Enter Age">
+
+<!--radio button -->
+        <h3>Gender</h3>
+        <label for="male">
+        <input id="radio" type="radio" name="gender" value="male"> Male
+        </label>
+        <label for="female">
+        <input id="radio" type="radio" name="gender" value="female"> Female
+        </label>
+<!--select box -->
+        <h3>Location</h3>
+        <select id="Destination" name="Destination" value="none">
+            <option value="none">select destination</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Canada">Canada</option>
+            <option value="USA">USA</option>
+        </select>
+<!--Checkbox -->
+        <h3></h3>
+        <label for="vegetarian">vegetarian:
+            <input name="vegetarian" id="vegetarian" type="checkbox">
+        </label>
+        <label for="Kosher">kosher:
+                <input name="kosher" id="kosher" type="checkbox">
+        </label>
+        <label for="lactoseFree">lactose free:
+                <input name="lactoseFree" id="lactoseFree" type="checkbox">
+        </label>
+<!--Submit button -->
+        <h3></h3>
+        <button>submit</button>
+    </form>
+
+    <script src="travel.js"></script>
+</body>
+
+</html>

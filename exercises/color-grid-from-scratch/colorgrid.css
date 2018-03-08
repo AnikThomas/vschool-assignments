@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box; 
+    font-size: 0px;
+}
+.pink{
+    background-color:pink;
+}
+
+.orange{
+    background-color:orange;
+}
+
+.green{
+    background-color:green;
+}
+
+.parent{
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    height: 200vh;
+    height: 100px;
+    margin-bottom: 20px;
+    background-color:firebrick;
+    align-items: flex-start;
+
+}
+
+.child{
+    height: 100px;
+    width: 100px;
+}
+
+.aa{
+    flex-grow: 1;
+}
+
+.bb{
+
+}
