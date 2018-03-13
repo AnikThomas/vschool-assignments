@@ -1,0 +1,18 @@
+
+
+//Write a function that accepts a string as a parameter. If the length of the string is less than or equal to twenty characters long, return the string concatenated with itself (string + string). If the string is more than twenty characters long, return the first half of the string.
+
+
+function longString(onlyString) {
+var splitString = onlyString.split("");
+
+if (splitString.length <= 20) {
+var joinString = splitString.join("");
+var doubleString = joinString + " " + joinString;
+return doubleString;
+} else {
+var halfString = "";
+for(var i = 0; i < (splitString.length / 2); i++){
+halfString += splitString[i];}
+return halfString;
+}

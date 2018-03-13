@@ -1,0 +1,99 @@
+
+*{
+    margin: 0;
+    font-size: 0;
+    box-sizing: border-box;
+    border: 0px solid;
+    font-family: SuperMarioGalaxy;
+
+}
+
+
+.wrapper{
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+h1{ 
+    padding-left: 12px;
+    font-size: 80px;
+    color: #e81b1f;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    flex: .15;
+    background-color: #ffd40e;
+    justify-content: center;
+
+}
+
+.banner{
+    flex: .35;
+    background-color: #e81b1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+
+}
+
+.img{
+    background-image: url("https://coursework.vschool.io/content/images/2015/07/luigi.png");
+    flex: 1;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+
+}
+
+.main{
+    flex: .35;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+footer{
+    flex: .15;
+    display: flex;
+    background-color:  #ffd40e;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+footer img{
+    /* flex-shrink:,  */
+    width: 75px;
+    height: 70%; 
+    padding-right: 10px;
+
+}
+
+@font-face {
+    font-family: marioFont;
+    src: url("SuperMario256.ttf");
+}
+
+.main h1{
+    font-size: 50px;
+    color: #e81b1f; 
+    padding-top:10px; 
+}
+
+.main h2, .main p{
+    font-size: 20px;
+    color: #e81b1f;
+    padding: 10px; 
+    /* min-height: 30vh;  */
+
+}
+

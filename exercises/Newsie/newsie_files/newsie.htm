@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>newsie</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="newsie.css" />
-</head>
+    
+<link rel="stylesheet" type="text/css" media="screen" href="./newsie_files/newsie.css"></head>
 <body>
 
 <div class="mypage">
@@ -37,7 +37,7 @@
                 <p>The bodies of cheap Acoustic guitars are typically made from laminated tonewood. More expensive Acoustics are made from higher cuts of solid spruce top wood On an Acoustic guitar, the material which the body is made from really matters, so those looking for a rich sound will want to choose a guitar with a body made from nicer wood such as spruce top wood.</p>
 
                 <div class="image">
-                    <img src="https://www.taylorguitars.com/sites/default/files/limited-guitar-acoustic-405x285.jpg" alt="acoustic guitar">
+                    <img src="./newsie_files/limited-guitar-acoustic-405x285.jpg" alt="acoustic guitar">
                 </div>
 
                 <p>The neck of the Acoustic guitar is usually made from maple, mahogany, or rosewood. However, some guitar necks are comprised of different woods. Yet again, the quality of wood does matter. Generally speaking, Acoustic guitars with necks made of a high quality maple or mahogany and bodies made with solid spruce top are quality guitars with great tone. These guitars usually cost $250 on up.</p>
@@ -46,7 +46,7 @@
 
                 <p>If you look inside the soundhole of the Acoustic guitar, you'll see the construction of the body. There are braces and linings, all essential to keeping the guitar intact and playable. X-bracing, a strong, durable bracing, is typically used on Acoustic guitars because it is heavy and strong enough to withstand the pressure of steel strings.</p>
 
-                <P>On the body of the guitar, you'll find the bridge. This is where one end of the strings goes. The strings are inserted into the little holes and the bridge pegs hold them there.</P>
+                <p>On the body of the guitar, you'll find the bridge. This is where one end of the strings goes. The strings are inserted into the little holes and the bridge pegs hold them there.</p>
 
                 <p>On the neck of the Acoustic guitar is the fretboard. Most fretboards on the Acoustic guitar are made of rosewood or ebony. More expensive Acoustic guitars have fretboards made of higher quality woods.</p>
 
@@ -64,5 +64,43 @@
         </footer>
 </div>
 
-</body>
-</html>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function() {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					head.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					head.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function(msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if(sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer'))
+			{
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

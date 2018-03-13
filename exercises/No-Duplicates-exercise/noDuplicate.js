@@ -8,7 +8,8 @@ function removeDuplicateCharacters(str) {
         if(str.indexOf(str[i]) === i){
             output.Dupes +=str[i];
         } else {
-            output.extras += str[i];
+           // output.extras += str[i];
+           output.extras = output.extras + str[i];
         }
     }
     return output;
