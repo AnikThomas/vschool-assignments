@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:linear-gradient(darkblue,lightskyblue);
+    color: red;
+    border: thin solid green;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    height: 20vh;
+}
+
+header .container{
+   width: 80%;
+   text-align: center;
+   margin:auto;
+   white-space: nowrap;
+}
+
+header h1{
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-size: 60px;
+}
+
+main .container{
+    width: 85%;
+
+}
+
+main{
+    background:linear-gradient(darkgreen,yellow,red);
+ 
+}
+
+footer {
+    background:linear-gradient(darkblue,lightskyblue);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+address{
+    text-align: center;
+    color: rgb(151, 17, 17);
+    font-size: 20px;
+}
+
+.container {
+    margin: auto;
+}
+
+
+label input{
+    display: block;
+    margin: auto;
+}
+
+#totalPrice{
+    text-align: center;
+    width:80%;
+    font-size: 50px;
+    margin: auto;
+    color: yellowgreen;
+}
+
+#tP{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-top:50px;
+    border-radius: 10px thin yellow
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+
+footer .container a{
+   color: crimson;
+   font-size:20px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+#belle{
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   flex-direction:column;
+}
+
+label{
+    display: inline-block;
+   /* width: 100px; */
+   margin: auto;
+   padding-bottom: 20px;
+   padding-top: 20px;
+
+}
+
+#cC{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: 100%;
+    margin-top: 20px;
+}
+
+#bO{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: 100%;
+    margin-top: 20px;
+}
+
+#gO{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: 100%;
+    margin-top: 20px;
+}
+
+
+
+
