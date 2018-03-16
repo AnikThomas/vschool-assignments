@@ -9,12 +9,16 @@ var cheepCheepsCost = document.getElementById("cheepCheepsCost");
 var totalPrice = document.getElementById("totalPrice");
 
 
+//sudocode
+//make a function of count goomba and event as the parameter 
+//and setmygoombaCost value to the event target value times 5,
+//and console the grand total price
 
 function countGoomba (event){
     myGoombaCost.value = event.target.value * 5;  // it takes what is in the goomba input box and multiple by 5 and store its in the box sum
     grandTotalPrice(); // call the grand total price function
 }
-Goomba.addEventListener("input",countGoomba);
+Goomba.addEventListener("input",countGoomba); //add event listener define the event and pass it to count goomba
 
 function countKingBob (event){
     kingBobCost.value = event.target.value * 7;

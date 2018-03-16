@@ -1,0 +1,13 @@
+{
+    "Menu": [
+
+        {
+            "appetizers": ["wonton","salad"],
+            "cold sandwiches":true ,
+            "hot sandwiches": ["cheese", "egg", "chicken"],
+            "desserts": ["ice cream","banana platter"],
+            "drinks": ["water","soda",""]
+        }
+       
+    ]
+}

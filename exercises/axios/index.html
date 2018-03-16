@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Axios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+   
+</head>
+<body>
+    
+    <ul id="data1"></ul>
+    <!-- post method -->
+    <form action="https://api.vschool.io/Anik/todo" method="post">
+        <label for="title">Title <input type="text" name="title" id="title" required></label>
+        <label for="description">Description <textarea name="description" id="description"></textarea></label>
+        <label for="price">Price <input type="number" name="price" id="price"></label>
+        <label for="completed"><input type="checkbox" name="completed" id="completed">completed</label>
+        <input type="submit" value="submit">
+    </form>
+   
+    
+
+
+
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
