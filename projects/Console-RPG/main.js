@@ -14,7 +14,6 @@ var Enemy = function(){
     this.hp = 50
     // etc etc
 }
-
 // while (player.hp > 0 && player.enemiesKilled <3){
     
 // }

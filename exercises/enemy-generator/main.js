@@ -1,5 +1,4 @@
 //https://coursework.vschool.io/enemy-generator/
-
 //Sudocode:
 //write constructor function which makes an object with 3 properties :type,hitpoints and defense
 
@@ -15,7 +14,7 @@ function getRandomType() {
     return enemyTypes[randIndex];
 }
 
-Enemy.prototype.genHitPoints = function () {
+Enemy.prototype.genHitPoints = function (type) {
     switch (this.type) {
         case "Ancient Dragon":
             return Math.floor(Math.random() * 21) + 80;
@@ -31,9 +30,5 @@ function printEnemies() {
         console.log(new Enemy());
     }
 }
-
-
-
-// printEnemies();
-
+printEnemies();
 console.log(new Enemy().type);
