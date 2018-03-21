@@ -1,41 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Mom's shopping List</title>
+    <title>Mom's Shopping List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
+
 <body>
-<div class="container-fluid">
-            <h1>Mom's Shopping List</h1>
-        <div class="new-item">            
-               <input type="text" id="new-item" >		              
-                  <button id="submit" type="submit" class="btn btn-lg btn-success ">Add to List</button>
-               <div class="error"></div>
-                  
-        </div>
+    <div class="wrapper">
+    <header><h1>My Shopping List</h1></header>
+    <form id="form">
+        <label for="listItem">Item to add</label><!-- label:is to when you click the name the cursor will be link to the box !-->
+        <input type="text" id="listItem" name="listItem">
+        <button><i class="fa fa-plus-circle fa-lg"></i></button>
+    </form>
+    <ol id="orderList">
         
-        <section class="main">
-          
-                <div class="list">
-                    <ul class="list-items">
-                        <span class="box"></span>
-                    </ul>
-                </div>
-        
-        </section>
-        </div>
+    </ol>
+
+    </div>
 
 
-
-
-
-
-
-
-      <script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>

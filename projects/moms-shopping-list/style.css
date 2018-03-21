@@ -1,0 +1,35 @@
+
+.wrapper{
+    background:url("./sticky-note-pencil.png")no-repeat left top;
+    width:720px;
+    margin:auto;
+    min-height: 720px;
+    padding-top: 175px;
+    padding-left: 75px;
+}
+
+#orderList{
+    width:600px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+}
+
+h1{
+    width:400px;
+    margin:auto;
+    padding-bottom: 0.5em;
+
+}
+form{
+   
+    width:400px;
+    margin:auto;
+    padding-bottom:1.5em;
+}
+
+button{
+    border :none;
+    background-color: transparent;
+}
+
