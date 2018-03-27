@@ -8,6 +8,11 @@ var Enemy = function () {
     this.defense = this.hitPoints * 3;
 }
 
+
+
+
+
+
 function getRandomType() {
     var enemyTypes = ["Ancient Dragon", "Prowler", "Mighty Grunt"];
     var randIndex = Math.floor(Math.random() * 3);
