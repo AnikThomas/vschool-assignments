@@ -1,0 +1,15 @@
+.red{
+    color:red;
+}
+
+.pink{
+    color:palevioletred;
+}
+
+.green{
+    color:yellow;
+    background-color:blue;
+    width:10cm;
+    margin:auto;
+    height:10cm;
+}

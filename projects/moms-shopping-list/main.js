@@ -27,19 +27,17 @@ function addToItemList(i){
 
 //the delete button:
     var button = document.createElement('button');
-    button.innerHTML = '<i class="fa fa-trash fa-lg"></i>';
+    button.innerHTML = '❌';
     button.name = storage[i];
     button.addEventListener('click', function (event){
-        var myParent = event.target;
+        var myParent = event.target.parentNode;
         console.log(myParent);
+        storage.splice(storage.indexOf(this.name), 1)//splice take the storage array and remove part of it in this scenerio we will looking for this.name amd removing that one item.
+        localStorage.setItem("list",JSON.stringify(storage))
         orderList.removeChild(myParent);
-        
-
     })
     li.appendChild(button);
    
-
-
 
 
     li.appendChild(text);//actually add the text in to the <li>

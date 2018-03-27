@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/exercises/multiple-array-method/main.js"
+            "program": "${workspaceFolder}/projects/Console-RPG/main.js"
         }
     ]
 }

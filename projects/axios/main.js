@@ -48,6 +48,8 @@ function del(id) {// delete method
     });
 };
 
-axios.put(toDoURL + id{// need my body part to get an id,
-    title:"buy whole milk"}
+axios.put(toDoURL + id{/,{completed: !todo}
+    //send PUT request
+    //URL - "https: with the <id>
+    //body -{completed: opposite of what it is now}
 });

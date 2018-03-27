@@ -20,8 +20,6 @@ xhr.onreadystatechange = function(){ //we define the "onready statechange"
     }
 }
 
-
 xhr.open("GET", "https://swapi.co/api/people/1/", true);  //use "GET" methode to pull that url the Json data
 xhr.send();
 
-//Postman is a toll to create the 

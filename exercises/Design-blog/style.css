@@ -1,23 +1,107 @@
-/* Add a black background color to the top navigation */
-.topnav {
-    background-color: black;
-    overflow: hidden;
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    /* text-align: center;
+    position: relative; */
+}
+
+#outwrapper{
+    margin:auto;
+    /* margin-top:400px; */
+    border: 1px solid;
+    position: absolute;
+    top:200px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
 
 }
 
-/* style the links inside the navigation bar */
-.topnav a{
-   float : left;
-   color : white;
-   text-align: center;
-   padding: 14px 16px;
-   text-decoration: none;
-   font-size:20px;
+header{
+    height:150px;
+    border:1px solid;
+    background:black;
+    grid-row-start: span 1;
+    padding-top: 50px;
+    color:whitesmoke;
+    
+    
+
+   
 }
 
-/*Change the color of links on hover */
-.topnav a:hover{
-    background-color: thistle;
-    color:hotpink;
+.navbar{
+    /* height: 50px; */
+    background: palevioletred;
+    border: 1px solid red;
+    position: fixed;
+    width: 100vw;
+    display: grid;
+   
+    
 }
 
+.navbar a{
+    padding: 1em;
+}
+
+aside{
+    
+   
+    border: 1px solid black;
+    height:auto;
+    background:blanchedalmond;
+    grid-row-start: span 1;
+
+}
+
+section{
+    grid-row-start: span 1;
+    border: 1px solid salmon;
+    height:600px;
+}
+
+div .widget{
+    height:180px;
+    border:1px solid lightgray;
+}
+
+footer{
+    height:300px;
+    border: 1px solid pink;
+    background: plum;
+    grid-row-start: span 1;
+}
+
+@media (min-width: 800px){
+    .navbar {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        height: 50px;
+
+
+        
+    }
+    #outwrapper{
+        display: grid;
+        top: unset;
+        /* position: absolute; */
+        width: 90%;
+        margin:  auto 0;
+        /* margin-top: 50px; */
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+    header, footer{
+        grid-column-start: span 3;
+    }
+
+    section{
+        grid-column-start: span 2;
+    }
+    aside{ 
+        grid-column-start: span 1;
+    }
+}
