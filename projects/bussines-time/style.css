@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+
+*{
+    box-sizing: border-box; /*n make sure that child element stick together in the container*/
+    margin: 0;/*setting a default 0 on every element */
+ 
+
+}
+
+body{
+    background-color:#656600;
+    font-family: 'Righteous', cursive;
+}
+
+.container{ /* hold all of the content refer to html <div>container*/
+    width: 100vw; /* set an initial width of 100%*/
+    border:1mm #c2c359 solid;
+    border-radius: 0.3cm;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr;
+    /* background: linear-gradient(darkgreen, lightgreen,yellowgreen) */
+    background-repeat: no-repeat;
+ 
+}
+
+header .top{
+    order: 1;
+    background: grey;
+    grid-column-start: span 4;
+    font: 11px arial,helvetica, sans-serif;
+    padding:0.5 1em;
+}
+
+header .brand{
+    order: 2;
+    grid-column-start: span 4; 
+    text-align: center;
+}
+
+header ul {
+    order: 4;
+    grid-column: span 4;
+    list-style-type: none;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding-left: 0px;
+
+}
+
+header ul li{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-align: center;
+    font-weight: 400;
+    color:white;
+}
+
+header ul li:hover{
+    background-color: whitesmoke;
+    color: #656600;
+}
+
+header h1{
+    order: 3;
+    grid-column: span 3;
+    color:whitesmoke;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 28px;
+    grid-column-start: span 1;
+    text-align: center;
+    padding:0.5em 1em;
+    font-family: 'Righteous', cursive;
+}
+
+.mainContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: whitesmoke;
+    line-height: 22px;
+    padding:0 1em;
+
+}
+h2{
+    padding-top: 0.5cm;
+    padding-bottom: 0.3cm;
+    color:#656600
+}
+
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    border:none;
+}
+
+footer div{
+    background-color:#656600;
+    font-family:Arial, Helvetica, sans-serif;
+    padding:0.5em 1em;
+  
+}
+
+footer div h3{
+    font: 15px;
+    font-weight: 700;
+    color:whitesmoke;
+    line-height: 24px;
+    padding-bottom: 0.5em;
+    border-bottom: thin solid whitesmoke;
+    margin-bottom: 0.5em;
+}
+
+footer div p{
+    font: 13px;
+    font-weight:400;
+    color:white;
+    line-height: 22px;
+    padding-bottom: 1em; 
+}
+
+footer .bottom{
+    background-color: firebrick;
+}
+
+@media (min-width: 768px){
+    .container {
+        max-width: 720px;
+        margin: auto;
+        
+        
+    }
+}
+@media (min-width: 992px){
+    .container {
+        max-width: 960px;
+       
+    }
+    header{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        background-position : right;
+        /* background-size: cover; */
+        background-image: url("./548954_10151590174962359_1612918805_n.jpg");
+    }
+    header .brand{
+        order: 2;
+        grid-column-start: span 1;
+        grid-row-start: span 2;
+    }
+    header h1{
+        order: 3;
+        grid-column-start: span 3;
+        margin-top:6cm;
+       
+        
+    }
+    header ul{
+        order:3;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-column-start: span 3;
+        height: 50px;
+        padding: 0;
+        margin: 0;
+
+    }
+    header ul li{
+        height: 50px;
+        padding: 1em;
+        margin: 0;
+    }
+    .mainContainer{
+        grid-template-columns: 3fr 1fr;
+        padding-top:0px;
+        grid-column-gap: 1em;
+    }
+    footer{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    footer .bottom{
+        grid-column-start: span 4;
+    }
+    @media (min-width: 1200px) {
+        .container {
+            max-width: 1140;
+        }
+    }
+}
+
