@@ -1,0 +1,21 @@
+ol{
+    list-style-position: inside;
+}
+
+li{
+    border:solid thin hotpink;
+    padding-left: 1cm;
+    background-color: gold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 0.5cm;
+   
+}
+h1, h2{
+    text-align: center;
+    
+}
+
+.bigContainer{
+    width:30%;
+    margin:auto;
+}
