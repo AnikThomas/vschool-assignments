@@ -1,0 +1,21 @@
+.Spring, .Summer, .Fall, .Winter{
+    width: 10cm;
+    border: thin solid firebrick;
+    text-align: center;
+    margin: 2cm;
+    border-radius: 0.5cm;
+    padding-bottom: 0.5cm;
+
+}
+
+.spring{
+    background-color: hotpink;
+
+}
+
+.summer{
+    background-color: red;
+}
+.fall{
+    
+}

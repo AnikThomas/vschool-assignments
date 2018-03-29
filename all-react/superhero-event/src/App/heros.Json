@@ -1,0 +1,67 @@
+[
+    {
+        "name": "Superman",
+        "catchphrase": "Great Caesar's ghost!",
+        "img":"https://vignette.wikia.nocookie.net/marvelcrossroads/images/a/a5/Kal-El_Superman_disguise_15.png/revision/latest?cb=20150319070819"
+    },
+
+
+    {
+        "name": "Batman",
+        "catchphrase": "To the Bat-pole Robin",
+        "img":"https://heroichollywood.b-cdn.net/wp-content/uploads/2017/02/Batman-v-Superman-Battfleck-Concept-Art-01.jpg?x42694"
+    },
+
+
+    {
+        "name": "Ironman",
+        "catchphrase": "I am Iron Man",
+        "img": "https://cdn.pixabay.com/photo/2015/11/14/21/31/ironman-1043700_960_720.jpg"
+    },
+
+
+    {
+        "name": "Captain America",
+        "catchphrase": "Avengers Assemble",
+        "img":"http://www.lostincollectibles.se/shop/15301/art1/h4135/36584135-origpic-549d7f.jpg"
+    },
+
+
+    {
+        "name": "The Green Lantern",
+        "catchphrase": "In brightest day, in blackest night, no evil shall escape my sight. Let those who worship evil's might, beware my power, GREEN LANTERN'S LIGHT!",
+        "img":"http://images2.fanpop.com/image/photos/14200000/Green-Lantern-Poster-the-green-lantern-corps-14291769-640-1000.jpg"
+    },
+
+    {
+        "name": "Spiderman",
+        "catchphrase": "With great power comes great responsibility",
+        "img": ""
+    },
+
+
+    {
+        "name": "Wolverine",
+        "catchphrase": "I’m the best there is at what I do",
+        "img": ""
+    },
+
+    {
+        "name": "Flash",
+        "catchphrase": "My name is Wally West. Im the fastest man alive",
+        "img": ""
+    },
+
+    {
+        "name": "Hulk",
+        "catchphrase": "HULK SMASH",
+        "img": ""
+    },
+
+    {
+        "name": "Wonderwoman",
+        "catchphrase": "Im the wonderwoman",
+        "img": ""
+    }
+  
+]
