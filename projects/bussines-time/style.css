@@ -8,7 +8,7 @@
 }
 
 body{
-    background-color:#656600;
+    background-image:url('./Spa-Background-Image.jpg');
     font-family: 'Righteous', cursive;
 }
 
@@ -23,6 +23,7 @@ header{
     grid-template-columns: 1fr;
     /* background: linear-gradient(darkgreen, lightgreen,yellowgreen) */
     background-repeat: no-repeat;
+    background-color: #656600;
  
 }
 
@@ -45,7 +46,7 @@ header ul {
     grid-column: span 4;
     list-style-type: none;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     padding-left: 0px;
 
 }
@@ -143,7 +144,7 @@ footer .bottom{
         grid-template-columns: 1fr 1fr 1fr 1fr;
         background-position : right;
         /* background-size: cover; */
-        background-image: url("./548954_10151590174962359_1612918805_n.jpg");
+        background-image: url("./group-magicSpa.jpg");
     }
     header .brand{
         order: 2;
@@ -160,7 +161,7 @@ footer .bottom{
     header ul{
         order:3;
         display:grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-column-start: span 3;
         height: 50px;
         padding: 0;
