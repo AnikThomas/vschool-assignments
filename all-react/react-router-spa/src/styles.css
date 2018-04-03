@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    box-sizing:border-box;
+}
+
+nav{
+    display:flex;
+    justify-content: space-around;
+}
+
+footer{
+    display:flex;
+    justify-content: space-around;
+}
+
+.container{
+    width:90%;
+    margin: auto;
+
+}
+
+body{
+    color: green;
+}
+
+header h1{
+    text-align: center;
+    padding-top:1cm;
+
+}
