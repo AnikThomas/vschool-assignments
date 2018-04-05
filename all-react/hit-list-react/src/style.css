@@ -1,0 +1,39 @@
+.triggerImg{
+    text-decoration-line: line-through;
+
+    
+
+}
+
+img{
+    width:5cm;
+    display:block;
+    margin:auto;
+  
+ 
+}
+
+ .list{   /* the parents that hold all items from : return(
+    <div className='list'>{data}</div>
+)*/
+    display:grid;
+    grid-template-columns: 1fr;
+    width:100vw;
+}
+
+.list div{/* the children of list from <div className={personObj.className} key={index}>*/
+
+   margin:1cm;
+   text-align: center;
+   border:thin solid black;
+   padding: 1cm;
+   
+}
+
+@media(min-width: 960px){
+    .list{
+        grid-template-columns: 1fr 1fr 1fr;
+       
+    }
+    
+}

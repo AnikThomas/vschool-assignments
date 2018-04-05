@@ -58,11 +58,6 @@ const friends = [
       ]
     }
   ]
-
-
-
-
-
 function FriendsList() {
     const friendsList = friends.map((personObj, index)=> <Friend key={personObj.name + index}{...personObj}/>)
 return (

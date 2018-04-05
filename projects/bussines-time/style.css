@@ -59,11 +59,18 @@ header ul li{
     color:white;
 }
 
-header ul li:hover{
+header a:hover{
     background-color: whitesmoke;
     color: #656600;
+    
 }
-
+header a{
+   
+    color:whitesmoke;
+    padding:0.4cm;
+    transition-duration:0.5s;
+    
+}
 header h1{
     order: 3;
     grid-column: span 3;

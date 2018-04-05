@@ -1,0 +1,157 @@
+
+* {
+    box-sizing: border-box;
+    /*n make sure that child element stick together in the container*/
+    margin: 0;
+    /*setting a default 0 on every element */
+}
+
+body {
+    background-image: url('./wellness-background.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+
+}
+
+.container {
+    /* hold all of the content refer to html <div>container*/
+    width: 100vw;
+    /* set an initial width of 100%*/
+    border: 1mm burlywood solid;
+    border-radius: 0.3cm;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-repeat: no-repeat;
+    background-color: #656600;
+}
+
+header .top {
+    order: 1;
+    background: grey;
+    grid-column-start: span 4;
+    font:arial;
+    padding: 0.5 1em;
+}
+
+header .brand {
+    order: 2;
+    grid-column-start: span 4;
+    text-align: center;
+}
+
+header ul {
+    order: 4;
+    grid-column: span 4;
+    list-style-type: none;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding-left: 0px;
+}
+
+header ul li {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-align: center;
+    font-weight: 400;
+    color: white;
+}
+
+header a:hover {
+    background-color: whitesmoke;
+    color: #656600;
+}
+
+header a {
+    color:white;
+    padding: 0.3cm;
+    transition-duration: 0.7s;
+    text-decoration-line: none;
+    font-style: bold;
+
+}
+
+.mainContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: whitesmoke;
+    line-height: 22px;
+    padding: 0 1em;
+}
+
+h2 {
+    padding-top: 0.5cm;
+    padding-bottom: 0.3cm;
+    color: #656600
+}
+
+footer .bottom {
+    background-color: firebrick;
+} 
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    header {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        background-position: right;
+        background-image: url("./header-wellness.jpg");
+    }
+    header .brand {
+        order: 2;
+        grid-column-start: span 1;
+        grid-row-start: span 2;
+    }
+    header h1 {
+        order: 3;
+        grid-column-start: span 3;
+        margin-top: 6cm;
+    }
+    header ul {
+        order: 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-start: span 3;
+        height: 50px;
+        padding: 0;
+        margin: 0;
+    }
+    header ul li {
+        height: 50px;
+        padding: 1em;
+        margin: 0;
+    }
+    .mainContainer {
+        grid-template-columns: 3fr 1fr;
+        padding-top: 0px;
+        grid-column-gap: 1em;
+    }
+    footer {
+        align-items:center;
+        min-height:6cm;
+        background-color:  #656600;
+        color:light brown;
+        line-height: 24px;
+        padding: 1em;
+        border-bottom: thin solid whitesmoke;
+        
+    }
+    footer .bottom {
+        grid-column-start: span 4;
+    }
+    @media (min-width: 1200px) {
+        .container {
+            max-width: 1140;
+        }
+    }
+}
