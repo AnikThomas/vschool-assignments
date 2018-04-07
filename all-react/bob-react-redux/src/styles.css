@@ -1,0 +1,11 @@
+.app {
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.app > button{
+    width: 80px;
+    font-size: 3em;
+}
