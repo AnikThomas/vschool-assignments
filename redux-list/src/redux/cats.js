@@ -13,6 +13,16 @@ const catReducer =(state=initialState, action) =>{
             data: state.data.filter((cat, index) => index !== action.index)
 
             } 
+        case "EDIT_CAT":
+            return{
+                data:state.datamap((cat, i) => {
+                    if(i === action.index){
+                        return action.newCat;
+                    }else{
+                        return cat;
+                    }
+                })
+            }
         default:
             return state;
     }
@@ -32,9 +42,9 @@ export const removeCat = index => {
     }
 }
 
-export const editCat = cat => {
-    return{
-        type : 'EDIT_CAT',
+export const editCat = (cat) => {
+    return {
+        type: "EDIT_CAT",
         cat
     }
 }
