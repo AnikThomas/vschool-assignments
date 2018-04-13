@@ -1,0 +1,19 @@
+.flex-around{
+    display: flex;
+    justify-content: space-around;
+}
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+}
+.restaurant{
+    display:grid;
+    grid-template-columns: 300px auto;
+    grid-gap: 1cm;
+
+}
+
+h1 h4{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
