@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-//import axios from 'axios';
 import Restaurant from './Restaurant';
-import getRestaurants from '../redux';
+import {getRestaurants} from '../redux/index.js';
 import {connect} from 'react-redux';
 
-
-// const zomatoURL = 'https://developers.zomato.com/api/v2.1/search?entity_id=Salt%20lake%20city&lat=40.769367&lon=-112.0346505&sort=rating&order=desc';
 
 class Restaurants extends Component {
     constructor() {
@@ -16,25 +13,17 @@ class Restaurants extends Component {
     }
     componentDidMount() {
         console.log(this.props);
-        //this.props.getRestaurants();
-    //     let config = {
-    //         headers: { 'user-key': '2cbcad77171e4166fcb726160b27b5a6' }
-    //     };
-    //     axios.get(zomatoURL, config).then(response => {
-    //         console.log("r3q4",response.data.restaurants);
-    //         this.setState({
-    //             restaurants: response.data.restaurants
-    //         })
-    //     })
+        this.props.getRestaurants();
+    
     }
     render() {
-        const restaurants = this.state.restaurants.map((restaurant, i) => {
+        const restaurants = this.props.restaurants.map((restaurant, i) => {
              console.log("hrd",restaurant)
             return <Restaurant key={i} {...restaurant} />
         });
         return (
 
-            <div>
+            <div className='Restaurants'>
                {restaurants}
             </div>
         )
@@ -48,7 +37,7 @@ const mapStateToProps = state => {
 }
 
 
-export default connect(mapStateToProps,{getRestaurants})(Restaurants);
+export default connect(mapStateToProps,{ getRestaurants })(Restaurants);
 
 
 

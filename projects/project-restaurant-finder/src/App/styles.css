@@ -1,3 +1,9 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+
+
 .flex-around{
     display: flex;
     justify-content: space-around;
@@ -10,6 +16,7 @@
     display:grid;
     grid-template-columns: 300px auto;
     grid-gap: 1cm;
+    padding: 1cm;
 
 }
 
@@ -17,3 +24,66 @@ h1 h4{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.Home{
+    background-image: url('restoImg/resto-ocean-club.jpg');
+    height:100vh;
+    width:100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    
+}
+.Home .banner{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1cm;
+    border-radius: 0.5cm;
+    text-align: center;
+}
+.Home div button{
+    display:block;
+    margin:auto;
+}
+
+.Restaurants{
+    background-color: black;
+    color: white;
+}
+a {
+    color: white;
+}
+
+.buttonfinder{
+    width:100%;
+    padding:0.2cm;
+    text-align: center;
+    border-radius: 1cm;
+    background-color: #00a680;
+    margin-top:0.2cm;
+
+}
+
+.About{
+    background-image: url('restoImg/resto-ocean-club.jpg');
+    height:100vh;
+    width:100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    
+}
+.About .banner{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1cm;
+    border-radius: 0.5cm;
+    text-align: center;
+}
+.About div button{
+    display:block;
+    margin:auto;
+}

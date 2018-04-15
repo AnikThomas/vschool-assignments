@@ -2,8 +2,11 @@ import React from "react";
 
 function About() {
     return (
-        <div>
-            About
+        <div className='About'>
+            <div className='banner'>
+                <h1>About this Page</h1>
+            
+            </div>
         </div>
     )
 }
