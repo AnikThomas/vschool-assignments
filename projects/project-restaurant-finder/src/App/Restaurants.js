@@ -5,12 +5,12 @@ import {connect} from 'react-redux';
 
 
 class Restaurants extends Component {
-    constructor() {
-        super();
-        this.state = {
-            restaurants: [],
-        }
-    }
+    // constructor() {
+    //     super();
+    //     this.state = {
+    //         restaurants: [],
+    //     }
+    // }
     componentDidMount() {
         console.log(this.props);
         this.props.getRestaurants();
@@ -18,7 +18,7 @@ class Restaurants extends Component {
     }
     render() {
         const restaurants = this.props.restaurants.map((restaurant, i) => {
-             console.log("hrd",restaurant)
+             console.log(restaurant)
             return <Restaurant key={i} {...restaurant} />
         });
         return (
@@ -31,12 +31,12 @@ class Restaurants extends Component {
 }
 
 
-
-const mapStateToProps = state => {
+// takes everything in the store and place that in to props
+const mapStateToProps = state => { 
     return state;
 }
 
-
+// this component connect to the redux store
 export default connect(mapStateToProps,{ getRestaurants })(Restaurants);
 
 
