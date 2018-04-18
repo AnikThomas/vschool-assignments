@@ -18,7 +18,6 @@ function Restaurant(props) {
                 <h4><a href={menu_url}>Menu</a></h4>
                 <address>{location.address}<br />{location.city}</address>
             </div>
-
         </div>
     )
 }

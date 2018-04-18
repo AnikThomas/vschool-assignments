@@ -5,20 +5,14 @@ import {connect} from 'react-redux';
 
 
 class Restaurants extends Component {
-    // constructor() {
-    //     super();
-    //     this.state = {
-    //         restaurants: [],
-    //     }
-    // }
     componentDidMount() {
-        console.log(this.props);
+        console.log("props",this.props);
         this.props.getRestaurants();
     
     }
     render() {
         const restaurants = this.props.restaurants.map((restaurant, i) => {
-             console.log(restaurant)
+             console.log("restaurant",restaurant)
             return <Restaurant key={i} {...restaurant} />
         });
         return (
