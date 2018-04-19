@@ -15,7 +15,7 @@ class App extends Component {
     componentDidMount() {
         axios.get("/bounties").then(response => {
             console.log(response.data);
-            this.setState(prev{
+            this.setState({   //prev
                 
             })
 
