@@ -1,74 +1,68 @@
 const express = require("express");
 const catRouter = express.Router();
-const uuid = require ("uuid");
-let cats = require("./catsData");
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/cats');
+
+const uuid = require("uuid");
+
+const CatModel = require("../models/cats.js");
 
 //actual routes go here
 catRouter.route("/")
-    .get((req, res) => {
-        const {query} = req;  //USING EXPRESS !!
-        console.log(query);
-        //check each cat in the array
-        //filter it by matching properties/values
-        const queriedCats = cats.filter(cat =>{
-            for(let key in query){
-                if(!cat.hasOwnProperty(key) || String(cat[key]).toLowerCase() !== query[key].toLowerCase()){
-                    return false;
-                }
-            }
-            return true;
+    .get((req, res) => {  //==============================================>  we use "find" to get request on mongos
+        CatModel.find(req.query, (err, foundCats) => {
+            if (err) res.status(200).send(err);
+            else if (foundCats) res.status(200).send(foundCats);
         })
-        console.log(req.query)
-        res.status(200).send(queriedCats);
+
     })
 
-    .post((req, res) => {
-        console.log(req.body)
-        const newcat = req.body;
-        newcat._id = uuid();
-        cats.push(newcat);
-        res.status(201).send(newcat);
+    .post((req, res) => {        //=======================================>we use "model name and ...model.save on mongos" to post
+        const newCat = new CatModel(req.body);
+        newCat.save((err, addedCat) => {
+            if (err) res.status(200).send(err)
+            else res.status(201).send(addedCat);
+        })
     })
 
-    //Post request
-        //convert request body from JSON
-        //provide and id to the data (cat being added)
-
-    //give data in request body an id
-       // console.log(req.body) // body come from middleware
-        //save the data in the request body to the 'database'
-    //send back the data that was added
-
-
-    //Get one request
-    //any requests to the /cats/id endpoint we will send back the cat matching that id
-    catRouter.route("/")
-    .get((req, res) => {
-        //get param id:
-        const {id} = req.params;
-        const foundcat = cats.filter(cat =>cat._id === id)[0];
-        res.status(200).send (foundcat);
-        //console.log(req.params.id)
+//Get one request
+//any requests to the /cats/id endpoint we will send back the cat matching that id
+catRouter.route("/:id")
+    .get((req, res) => {                    //================================>use "findOne()" to get request for one id on mongos / to get particular cat
+        CatModel.findOne({ _id: req.params.id }, (err, foundCat) => {
+            if (err) res.status(200).send(err)
+            else res.status(200).send(foundCat);
+        })
     })
 
     //DELETE one request
-    .delete((req, res) => {
-        const {id} = req.params;
-        //find and remove cat matching id:
-       cats = cats.filter(cat => cat._id !==id);
-        //send back the cat
-        res.status(204).send();
+    .delete((req, res) => {          //================================>use "findByIdAndRemove()" to delete for one request on mongos
+        CatModel.findOneAndRemove({ _id: req.params.id }, (err, deletedCat) => {      // we can use CatModel.findById, too instead of findByOneAndRemove
+            if (err) {
+                res.status(200).send(err)
+            } else if (deletedCat) {
+                res.status(204).send()
+            } else {
+                res.status(404).send("404 --- Cat Not Found");
+            }
+        })                                
 
     })
 
     //PUT one
-    .put((req, res) =>{
-        //find the param id
-        const {id} = req.params;
-        let editedcat = req.body;
-        //map through cats and replace the cat w/ matching id with req.body
-        cats = cats.map(cat => cat._id === id ? editedcat = {...cat, ...editedcat} : cat);
-        res.status(200).send(editedcat)  //
+    .put((req, res) => {   //================================>use "findOneAndUpdate()" to put one on mongos
+        CatModel.findOneAndUpdate({ _id: req.params.id }, req.body, {
+            new: true
+        }, (err, updatedCat) => {
+            if (err) {
+                res.status(200).send(err)
+            } else if (updatedCat) {
+                res.status(200).send(updatedCat)
+            } else {
+                res.status(404).send("404 --- Cat Not Found");
+            }
+        }
+        )
     })
 
 
