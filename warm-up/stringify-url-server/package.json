@@ -1,0 +1,18 @@
+{
+  "name": "stringify-url-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body": "^5.1.0",
+    "express": "^4.16.3",
+    "parser": "^0.1.4",
+    "uuid": "^3.2.1"
+  }
+}
