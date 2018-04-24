@@ -1,0 +1,17 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+}
+.singlePost{
+    display: grid;
+    grid-template-columns: 1cm 1fr;
+    width: 90vw;
+    margin:auto;
+    margin-bottom:1cm ;
+}
+
+.voteBox{
+  
+    max-height: 1px;
+}
+
