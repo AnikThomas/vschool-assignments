@@ -10,7 +10,9 @@ const CatModel = require("../models/cats.js");
 //actual routes go here
 catRouter.route("/")
     .get((req, res) => {  //==============================================>  we use "find" to get request on mongos
-        CatModel.find(req.query, (err, foundCats) => {
+        CatModel.find(req.query)
+        .populate("agencyId")
+        .exec((err, foundCats) => {
             if (err) res.status(200).send(err);
             else if (foundCats) res.status(200).send(foundCats);
         })
@@ -19,9 +21,9 @@ catRouter.route("/")
 
     .post((req, res) => {        //=======================================>we use "model name and ...model.save on mongos" to post
         const newCat = new CatModel(req.body);
-        newCat.save((err, addedCat) => {
-            if (err) res.status(200).send(err)
-            else res.status(201).send(addedCat);
+        newCat.save((err, savedCat) => {
+            if (err) return res.send(err)
+            else res.status(201).send(savedCat);
         })
     })
 
@@ -29,7 +31,9 @@ catRouter.route("/")
 //any requests to the /cats/id endpoint we will send back the cat matching that id
 catRouter.route("/:id")
     .get((req, res) => {                    //================================>use "findOne()" to get request for one id on mongos / to get particular cat
-        CatModel.findOne({ _id: req.params.id }, (err, foundCat) => {
+        CatModel.findOne({ _id: req.params.id })
+        .populate("agencyId")
+        .exec((err, foundCat) => {
             if (err) res.status(200).send(err)
             else res.status(200).send(foundCat);
         })
@@ -37,7 +41,9 @@ catRouter.route("/:id")
 
     //DELETE one request
     .delete((req, res) => {          //================================>use "findByIdAndRemove()" to delete for one request on mongos
-        CatModel.findOneAndRemove({ _id: req.params.id }, (err, deletedCat) => {      // we can use CatModel.findById, too instead of findByOneAndRemove
+        CatModel.findOneAndRemove({ _id: req.params.id })
+        .populate("agencyId")
+        .exec((err, deletedCat) => {      // we can use CatModel.findById, too instead of findByOneAndRemove
             if (err) {
                 res.status(200).send(err)
             } else if (deletedCat) {
@@ -53,7 +59,9 @@ catRouter.route("/:id")
     .put((req, res) => {   //================================>use "findOneAndUpdate()" to put one on mongos
         CatModel.findOneAndUpdate({ _id: req.params.id }, req.body, {
             new: true
-        }, (err, updatedCat) => {
+        })
+        .populate("agencyId")
+        .exec( (err, updatedCat) => {
             if (err) {
                 res.status(200).send(err)
             } else if (updatedCat) {
@@ -64,6 +72,7 @@ catRouter.route("/:id")
         }
         )
     })
+    
 
 
 
