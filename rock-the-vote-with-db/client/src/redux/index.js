@@ -68,7 +68,13 @@ export const upvotePosting = (postingID) => {
     }
 }
 
+export const newPosting =(obj)=>{
+    //console.log('redux', obj);
+    return dispatch =>{
+        axios.post(`/post`,obj)
+    }
 
+}
 
 
 

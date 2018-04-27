@@ -11,7 +11,7 @@ class AllPosting extends Component {
     render() {
         console.log(this.props);
         let { data } = this.props;
-        // data.sort((a, b) => { return b.upvote - a.upvote })
+        data.sort((a, b) => { return b.upvote - a.upvote })
         const posting = data.map((obj) => <PostingMin key={obj._id} {...obj} downvotePosting = {this.props.downvotePosting} upvotePosting = {this.props.upvotePosting}  />)
 
         return (

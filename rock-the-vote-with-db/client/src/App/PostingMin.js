@@ -1,5 +1,5 @@
 import React from "react";
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
@@ -13,7 +13,7 @@ function postingMin(props) {
         <div className="singlePost">
             <div className="voteBox" ><i className="far fa-hand-point-up fa-2x" onClick={() => upvotePosting(_id)} title={upvote}></i><h3>{votes}</h3><i className="far fa-hand-point-down fa-2x" onClick={() => downvotePosting(_id)} title={downvote}></i></div>
             <div>
-                <h2>{title}</h2>
+                <h2><Link to = {`posting/${_id}`}>{title}</Link></h2>
 
                 <div>
                     {description}</div>

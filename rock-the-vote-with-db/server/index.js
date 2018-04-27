@@ -27,5 +27,5 @@ app.use('/upvote',upVote );
 
 
 //data connection and start the server
-mongoose.connect ('mongodb://localhost:27017/votes');
+mongoose.connect ('mongodb://localhost:27017/votes');//connected to database
 app.listen(PORT,()=> console.log(`vote server running on ${PORT}`))

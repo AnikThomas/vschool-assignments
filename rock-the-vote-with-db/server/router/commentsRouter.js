@@ -52,7 +52,7 @@ commentRouter.route("/:id")
     //PUT one
     .put((req, res) => {   //================================>use "findOneAndUpdate()" to put one on mongos
         CommentModel.findOneAndUpdate({ _id: req.params.id }, req.body, {
-            new: true
+            new: true//
         })
             .populate("put_id")
             .exec((err, updatedComment) => {

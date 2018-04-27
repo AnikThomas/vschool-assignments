@@ -2,16 +2,73 @@
     box-sizing: border-box;
     margin: 0;
 }
+
+body{
+    background-color:black;
+    color: white;
+}
 .singlePost{
     display: grid;
     grid-template-columns: 1cm 1fr;
-    width: 90vw;
+    width: 80vw;
     margin:auto;
     margin-bottom:1cm ;
+
 }
 
 .voteBox{
-  
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0.2cm;
     max-height: 1px;
+    text-align: center;
+    
+    
 }
+
+.comment{
+    width:80vw;
+    margin:auto;
+}
+
+header{
+    margin-bottom: 0.5cm;
+    text-align: center;
+    border-bottom: thin dotted white;
+    padding: 0.5cm;
+}
+
+a{
+    color:lightskyblue;
+    text-decoration: none;
+}
+
+.title{
+    color:lightskyblue;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+textarea{
+    display:block;
+    width:100%;
+    
+    
+}
+
+form{
+    width:90vw;
+    margin:auto;
+}
+
+input,textarea,button{
+    margin: 0.2cm;
+}
+
+
+
 
