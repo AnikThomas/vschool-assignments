@@ -5,9 +5,10 @@ const GenreModel = require("../model/genreModel");//constructor
 
 genreRouter.route("/")
     .get((req, res) =>{
-        GenreModel.find(req.query, (err, foundGenres) =>{
+        GenreModel.find(req.query)
+        .exec((err, foundGenres) =>{
             if(err)return res.status(400).res.send(err)
-            res.status(200).send(foundgenres);
+            res.status(200).send(foundGenres);
         })
     })
 

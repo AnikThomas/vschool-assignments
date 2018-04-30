@@ -5,7 +5,8 @@ const AuthorModel = require("../model/authorModel");//constructor
 
 authorRouter.route("/")
     .get((req, res)=> {
-        AuthorModel.find(req.query, (err, foundAuthors)=>{
+        AuthorModel.find(req.query)
+        .exec((err, foundAuthors)=>{
             if(err)return res.status(400).res.send(err)
             res.status(200).send(foundAuthors);
         })

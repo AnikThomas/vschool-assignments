@@ -4,7 +4,10 @@ const BookCollectionModel = require("../model/booksCollectionsModel");//construc
 
 bookCollectionRouter.route("/")
     .get((req, res)=>{
-        BookCollectionModel.find(req.query, (err, foundBooks)=>{
+        BookCollectionModel.find(req.query)
+        .populate('author_ID')
+        .populate('genre_ID')
+        .exec((err, foundBooks)=>{
             if(err)return res.status(400).res.send(err)
             res.status(200).send(foundBooks);
         })
@@ -21,6 +24,8 @@ bookCollectionRouter.route("/")
     bookCollectionRouter.route("/:id")
     .get((req, res) => {
         BookCollectionModel.findOne({_id:req.params.id})
+        .populate('author_ID')
+        .populate('genre_ID')
         .exec((err, foundBookCollection) =>{
             if(err)res.status(400).send(err)
             else res.status(200).send(foundBookCollection);

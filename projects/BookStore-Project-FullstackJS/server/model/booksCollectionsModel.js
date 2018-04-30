@@ -2,37 +2,34 @@ const mongoose = require ("mongoose");
 const {Schema} = mongoose;
 
 const BookCollectionsSchema = new Schema({
-    Title:{
+    title:{
         required: true,
         type: String
     },
-    Author_id:{
-        type:mongoose.Schema.Types.Objectid,
-        ref:"author"//reference
-    },
-    Publisher:{
+    author_ID:[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "author"
+    }],
+    publisher:{
         required: true,
         type: String
     },
-    Image:{
+    image:{
         required: true,
         type: String
     },
-    Price:{
+    price:{
         required: true,
         type: Number
     },
-    Genre_ID:{
-        type: mongoose.Schema.Types.Objectid,
-        ref:"genre"//reference
+    genre_ID:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "genre"
     },
-    ISBN_ID:{
+    isbn:{
         type:Number
-        
     }
-})
-
-
+});
 
 
 const BookCollectionsModel = mongoose.model("books_collections", BookCollectionsSchema); // "books_collections" is from DB reference collections

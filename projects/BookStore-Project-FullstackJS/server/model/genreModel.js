@@ -12,4 +12,4 @@ const GenreSchema = new Schema({
 
 
 const GenreModel = mongoose.model("genre", GenreSchema);//'genre'is from DB reference collections
-module.exports = genreModel;
+module.exports = GenreModel;
