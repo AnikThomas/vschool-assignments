@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Libre Baskerville", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 32px;
+    color: #325050;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+h1,
+h3 {
+    text-transform: uppercase;
+}
+
+h1 {
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 36px;
+     margin-left: -100px;
+}
+
+.A h1::before {
+    display: inline-block;
+    top: 20px;
+    content: "";
+    width: 80px;
+    height: 80px;
+    background: url("./img-zengarden/enso.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 0.6;
+}
+
+h2 {
+    font-size: 18px;
+    font-style: italic
+}
+
+section h3 {
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Julius Sans One", sans-serif;
+    color: #2E484C;
+    margin-top: 1em;
+}
+
+section p {
+    margin-bottom: 1em;
+}
+
+.A {
+    height: 230px;
+    background: #2d6360 50% 0 url(./img-zengarden/huntington.jpg) no-repeat;
+    background-attachment: fixed, fixed, fixed, scroll;
+    background-image: url(./img-zengarden/contours.png), url(./img-zengarden/noise.png), url(./img-zengarden/gridlines.png), url(./img-zengarden/huntington.jpg);
+    background-position: 0 0, 0 0, -5px -25px, 0 50%;
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    background-size: auto, auto, auto, cover;
+    text-align: center;
+    color: #fff;
+    font-family: "Julius Sans One", sans-serif;
+}
+
+#brand {
+    width: 100px;
+}
+
+.A1 {
+    grid-column-start: 1;
+}
+
+.A2 {
+    background-color: rgba(0, 0, 0, 0.1);
+    position: relative;
+    bottom: -33px;
+}
+
+.A2 a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.A2 ul {
+    list-style-type: none;
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.A2 ul li {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.6cm;
+}
+.A2 ul li:nth-child(2) {
+    width:100%
+}
+
+.A1 ul li:nth-child(2):hover,
+.A2 ul li:last-child:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.B {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.B .container p a {
+    border-radius: 5px;
+    color: #809b7e;
+    font-family: 'Julius Sans One', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.25s ease-out;
+    padding: 0.5em;
+}
+
+.B .container p a:hover,
+.B .container p a:focus {
+    color: #fff;
+    background: #3d8a9f;
+}
+
+.C {
+    background-color: rgba(138, 188, 159, 0.5);
+    background-image: url(./img-zengarden/contours.png), url(./img-zengarden/gridlines.png), url(./img-zengarden/bamboo.png);
+    background-repeat: repeat, repeat, no-repeat;
+    background-size: auto, auto, cover;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.D {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.E {
+    background-image: url(./img-zengarden/contours@2x.png), url(./img-zengarden/gridlines.png), url(./img-zengarden/noise.png), url(./img-zengarden/koi.jpg);
+    background-size: 50% auto, auto, auto, cover;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 3em;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.E a {
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    text-decoration: none;
+}
+
+.F {
+    background-color: #214246;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.F .container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.F .container a {
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.25s ease-out, box-shadow 0.25s ease-out;
+}
+
+.F .container a:hover,
+.F .container a:focus {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.G {
+    background: #edf4f0;
+}
+
+.G .container ul {
+    list-style: none;
+    padding-left: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.G .container ul li {
+    border-bottom: solid 1px #d9e3dc;
+    color: #c0cac3;
+    font-style: italic;
+    padding: 1.5em;
+}
+
+.G .container ul li:hover {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+.G .container ul li a:hover {
+    color: #1a5952;
+}
+
+.G .container ul li .design-name {
+    transition: all 0.25s ease-out;
+    font-family: "Julius Sans One", sans-serif;
+    color: #49968E;
+    font-size: 1.2em;
+    display: block;
+    font-style: normal;
+    text-decoration: none;
+    margin-bottom: 0.25em;
+}
+
+.G .container ul li .designer-name {
+    transition: all 0.25s ease-out;
+    color: #616857;
+    font-size: 0.9em;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.H {
+    background-color: rgba(138, 188, 159, 0.5);
+    background-image: url(./img-zengarden/bamboo.png);
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.H .container ul {
+    list-style: none;
+    padding-left: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.H .container ul li {
+    border-bottom: solid 1px #a0b9ad;
+    font-style: normal;
+    padding: 1.5em;
+}
+
+.H .container ul li a {
+    transition: all 0.25s ease-out;
+    font-family: "Julius Sans One", sans-serif;
+    color: #49968E;
+    font-size: 1.2em;
+    display: block;
+    font-style: normal;
+    text-decoration: none;
+    margin-bottom: 0.25em;
+}
+
+.J {
+    display: none;
+    background-color: #e7ede9
+}
+
+
+@media (min-width:1130px) {
+
+    .wrapper {
+        grid-template-columns: 1fr 1fr 1fr 350px; 
+    }
+
+    .A{
+        grid-column: span 4;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 350px;
+    }
+    .A1{
+        grid-column: span 3;
+    }
+    .A2{
+        bottom:unset;
+    }
+    B{
+        grid-row: 2;
+        grid-column: span 3;
+    }
+    .C{
+        grid-row: 3;
+        grid-column: span 3;
+    }
+    .H{
+        grid-row: 3;
+        grid-column: span 1;
+    }
+    .D{
+        grid-row: 4;
+        grid-column: span 3;
+    }
+    .J{
+        grid-row: 4;
+        grid-column: span 1;
+    }
+    .E{
+        grid-row:5;
+        grid-column: span 4
+    }
+    .F {
+        grid-row:6;
+        grid-column: span 4
+    }
+}
