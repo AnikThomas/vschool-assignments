@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
-import { getBookCollection } from "../redux";
+//import { getBookCollection } from "../redux";
 import { connect } from "react-redux";
-import Book from "./book"
 
 class Genre extends Component {
     componentDidMount() {
-        this.props.getBookCollection(this.props._id, this.props.name)
+     //  this.props.getBookCollection(this.props.match.url)
     }
     render() {
         console.log('genreProps', this.props);
-        let bookCollection = [];
-        if (this.props[this.props.name]) {
-        
+         let bookCollection = [];
+         if (this.props[this.props.match.url.substr(1)]) {
+            bookCollection = this.props[this.props.match.url.substr(1)].map((obj) => {
+                return <div key={obj._id} style={{ maxWidth: "500px" }}><h2>{obj.title}</h2><div>by {obj.author_ID[0].firstname} {obj.author_ID[0].lastname} <strong>Price:${obj.price}</strong></div><img src={obj.image} alt='' style={{ display: "block" }} /> {obj.isbn}</div>
 
-            bookCollection = this.props[this.props.name].map((obj) => {<Book key={obj._id} {...obj} />
-
-                
             })
         }
+
+
+
+
+
+
         return (
-            <div style={{ display: "flex" }}>
+            <div >
                 {bookCollection}
             </div>
         )
@@ -28,7 +31,6 @@ class Genre extends Component {
 
 
 
-
 const mapStateToProps = (state) => state
 
-export default connect(mapStateToProps, { getBookCollection })(Genre);
+export default connect(mapStateToProps, { })(Genre);

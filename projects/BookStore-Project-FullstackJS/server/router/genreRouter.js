@@ -21,12 +21,17 @@ genreRouter.route("/")
     })
 
     genreRouter.route("/:id")
-    .get((req, res) =>{
-        GenreModel.findOne({_id:req.params.id})
-        .exec((err, foundgenre) => {
-            if(err)res.status(400).send(err)
-            else res.status(200).send(foundGenre);
-        })
+    .get((req, res) => {
+        GenreModel.findOne({ _id: req.params.id })
+            .exec((err, foundGenre) => {
+                if (err) {
+                    res.status(400).send(err)
+                } else if (foundGenre) {
+                    res.status(200).send(foundGenre)
+                } else {
+                    res.status(404).send("Genre Not found")
+                }
+            })
     })
 
     .delete((req, res) =>{
