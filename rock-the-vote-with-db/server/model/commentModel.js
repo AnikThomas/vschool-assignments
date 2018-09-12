@@ -6,7 +6,7 @@ const CommentSchema = new Schema({
         required: true,
         type: String
     },
-    post_id:{
+    post_ID:{
         type:mongoose.Schema.Types.ObjectId,
         ref: "post"//reference
     },

@@ -23,6 +23,14 @@ class NewPosting extends Component {
         window.location.assign('/')
 
     }
+    handleChange(e) {
+        this.setState({
+            ...this.state,
+            [e.target.name]: e.target.value
+
+        })
+    }
+    
     render() {
         return (
             <div>

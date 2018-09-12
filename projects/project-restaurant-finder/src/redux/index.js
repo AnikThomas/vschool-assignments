@@ -36,5 +36,4 @@ export function getRestaurants() {
 //thunk : hey I know you dont have response from axios yet, here's what you need to do once you have that
 //applyMiddleware : gives redux more capability
 const store = createStore(reducer, applyMiddleware(thunk));
-
 export default store;

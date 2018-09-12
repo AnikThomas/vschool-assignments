@@ -13,6 +13,7 @@ commentRouter.route("/")
             })
     })
     .post((req, res) => {
+        console.log(req.body)
         const newComment = new CommentModel(req.body);
         newComment.save((err, addedComment) => {
             if (err){

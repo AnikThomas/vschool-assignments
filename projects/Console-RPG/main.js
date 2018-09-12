@@ -1,6 +1,6 @@
-var rs = require("readline-sync");
+var rs = require("readline-sync"); //for user interaction
 
-var Enemy = function () {
+var Enemy = function () {//enemy constructor
     this.type = getRandomType();
     this.hitPoints = this.genHitPoints();
     this.defense = this.hitPoints * 3;

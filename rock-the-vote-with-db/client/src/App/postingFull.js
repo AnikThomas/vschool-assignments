@@ -14,8 +14,44 @@ class PostingFull extends Component {
         this.upVotePosting = this.upVotePosting.bind(this);
         this.downVotePosting = this.downVotePosting.bind(this);
         this.deletePosting = this.deletePosting.bind(this);
+        this.handleChange = this.handleChange.bind(this);
 
+    }
+    handleChange = (e) => {
+        console.log(e.target.value)
+        this.setState({
+            ...this.state,
+            [e.target.name]: e.target.value
+        })
+        
+    }
+    addComments = (e) => {
+        e.preventDefault();
+        console.log("data", this.state.data);
 
+        if (this.state.newComment !== "") {
+            axios.post(`/comments`, { comment: this.state.newComment, post_ID: this.state.data._id })
+                .then(response => {
+                    this.setState({
+                        ...this.state,
+                        comments: [response.data, ...this.state.comments],
+                        newComment: ""
+                    })
+                })
+        }
+    }
+    delComment = (id) => {
+            axios.delete(`/comments/${id}`)
+                .then(response => {
+                    this.setState({
+                        ...this.state,
+                        comments: this.state.comments.filter(comment=>{
+                            if(comment._id === id) return false
+                            return true
+                        })
+                    })
+                })
+        
     }
     getOnePosting = postingID => {
         axios.get(`/post/${postingID}`)
@@ -97,6 +133,10 @@ class PostingFull extends Component {
                 
 
             </div>
+            <form onSubmit={this.addComments}>
+                    <input type="submit" />
+                    <textarea name="newComment" onChange={this.handleChange} value={this.state.newComment}></textarea>
+                </form>
             {comments}
             </div>
         )

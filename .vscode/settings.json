@@ -1,0 +1,5 @@
+{
+    "html.autoClosingTags": false,
+    "editor.autoClosingBrackets": false,
+    "editor.wordWrap": "on"
+}
